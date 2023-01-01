@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>تعليقات الزوار</title>
+</head>
+<style>
+    #form {
+        color: aliceblue;
+        display: table;
+        background-color: coral;
+        border: solid 2px black;
+        padding: 15px;
+
+
+
+
+    }
+
+    .row {
+        display: table-row;
+    }
+
+    .row table {
+        display: table-cell;
+        padding: 10px;
+        text-align: right;
+
+    }
+
+    .row input {
+        display: table-cell;
+        padding: 10px;
+
+    }
+
+    #t {
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <form id="form" name="form2">
+        <p>
+        <h1>fill these form:</h1>
+
+
+
+        <div class="row">
+            <label for="ema">Ente your email:</label>
+            <input type="email" name="ema" placeholder="@gmail.com">
+        </div>
+        <div class="row">
+
+            <input type="radio" class="rid" name="rad">
+            <label for="ra">mail</label>
+        </div>
+        <div class="row">
+
+            <input type="radio" name="rad">
+            <label for="ra">femail</label>
+        </div>
+
+
+
+
+        <div class="row">
+            <label id="n" for="txt">write comment</label>
+            <textarea name="txt" id="t" cols="20" rows="5"></textarea>
+
+
+        </div>
+        <div class="row">
+            <select name="cmdnation" id="">
+                <option > sudan</option>
+                <option value="">japan</option>
+                <option value=""> egypt</option>
+                <option value="">soris</option>
+                <option value="">jordan</option>
+                <option value="">amman</option>
+
+            </select>
+        </div>
+        <div class="row">
+            <label for="sub"></label>
+
+            <button onclick="commin();">send</button>
+        </div>
+
+
+
+        <script lang="javascript">
+            function commin() {
+                if(document.form2.cmdnation.selectedIndex==0 &&document.form2.rad[0].checked==false&& document.form2.rad[1].checked==false){
+                    alert("تحقق من اختيار الدوله و نوع الجنس");
+                }
+            
+               else if (document.form2.cmdnation.selectedIndex==0) {
+
+                    alert("تحقق من اختيار اسم الدوله");
+                    valid = false;
+
+                }
+                else if(document.form2.rad[0].checked==false&& document.form2.rad[1].checked==false){
+                    alert("من فضلك قم باختيار نوع الجنس");
+             
+                }}
+        </script>
+
+</body>
+
+</html>

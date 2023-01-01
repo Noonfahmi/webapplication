@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>التسجيل في المكتبه</title>
+    <style>
+        .errorData {
+            border: solid;
+            border-color: red;
+            border-width: 20px;
+        }
+
+        body {
+            background-color: coral;
+
+        }
+
+        .nn {
+            padding: 5px;
+            height: 50px;
+
+        }
+
+        p {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body style="justify-content: center;">
+    <center>
+        <h1 style="text-align: center;">REGISTRATION FORM</h1>
+        <div name="RegForm">
+            <div class="nn">
+                <form name="form1">
+                    <p>Name: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txtName" size="65" name="Name" placeholder="Enter user name" /></p>
+            </div>
+
+            <div class="nn">
+                <p>Address:&nbsp; &nbsp;<input type="text" size="65" name="Address" /> </p>
+            </div>
+            <div class="nn">
+                <p>E-mail : &nbsp;&nbsp;&nbsp;<input type="text" id="tetEmail" size="65" name="EMail" placeholder="@gmail.com"/></p>
+            </div>
+
+
+
+
+            <div class="nn">
+                <p>Password: <input type="password" id="txtPassword" size="65" name="Password" placeholder="********"></p>
+            </div>
+           
+
+
+
+
+            <div>
+                <p>
+                    <button onclick="validation()">send</button>
+                    <input type="reset" value="Reset" name="Reset" />
+                </p>
+            </div>
+
+
+
+        </div>
+        </form>
+    </center>
+    <script lang="javaScript">
+        function validation() {
+
+            if (document.form1.Name.value == "" && document.form1.Password.value == "" && document.form1.EMail.value == "") {
+                alert("ادخل الاسم والعنوان و الايميل وكلمة المرور");
+
+
+            }
+            else if(document.form1.Name.value == "" ){
+                    alert("ادحل اسم المستخدم");}
+            
+            else if (document.form1.EMail.value == "" ){
+                alert("ادحل الايميل");}
+
+            
+            else if(document.form1.Password.value==""){
+                alert("ادخل كلمة المرور");}
+    
+            else{
+                alert("تم تسجيل الدخول بنجاح");
+            
+
+
+
+
+
+            }
+
+        }
+
+
+
+    </script> 
+</body>
+
+
+</html>

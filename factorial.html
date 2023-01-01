@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <STyle>
+        body{
+            background-color: coral;
+            text-align: center;
+        }
+        #myBtn{
+            width: 100px;
+            height: 40px;
+            border-radius: 3px;
+            border-color: black;
+
+
+        }
+        #myNumber{
+            width: 300px;
+            height: 40px;
+            border-radius: 3px;
+            border-color: black;
+            text-shadow: 3px;
+        }
+    </STyle>
+</head> 
+ 
+ 
+ 
+<bod> 
+ 
+    <input id="myNumber" type="number" min="0" placeholder="Enter your Number 
+here..." style="width: 180px ;" /> 
+    <br /> <br /><br /> 
+ 
+    <button id="myBtn" onclick="myBtnClick()">FACTORIAL</button> 
+    <script> 
+        function factorial(n) { 
+            let answer = 1; 
+         
+            if (n == 0 || n == 1) {  
+                return answer; 
+            } else { 
+                for (var i = n; i >= 1; i--) { 
+                    answer = answer * i; 
+                } 
+                return answer; 
+            } 
+        } 
+ 
+        function myBtnClick() { 
+            var myEnteredValue = document.getElementById("myNumber").value; 
+            var res = factorial(myEnteredValue); 
+ 
+            alert(res); 
+        } 
+  
+    </script> </body> 
+ 
+</html> 
+ 
